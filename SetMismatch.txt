@@ -1,0 +1,36 @@
+//https://leetcode.com/problems/set-mismatch/
+//range is from 1 to n: so cyclic sort.
+
+
+class Solution {
+    public int[] findErrorNums(int[] arr) {
+        int i = 0;
+        
+        //used cyclic sort here 
+
+        while(i < arr.length){
+            int correctIndex = arr[i] - 1;
+            if(arr[i] != arr[correctIndex]){
+                swap(arr, i, correctIndex);
+            }else{
+                i ++;
+            }
+        }
+
+        //this is the concept 
+
+        for(int j = 0; j<arr.length;j++){
+            if(arr[j] != j+1){
+                return new int[] {arr[j], j+1};
+            }
+        }
+        return new int[] {-1};
+    }
+
+    // here is simple swapping part
+
+    static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
+}}
