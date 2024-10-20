@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/missing-number/
+// cyclic sort
 
 class Solution {
     public int missingNumber(int[] nums) {
