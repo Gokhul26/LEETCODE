@@ -28,7 +28,6 @@ public class RemoveDuplicates {
                     runner = runner.next;
                 }
             }
-
             current = current.next;
         }
     }
