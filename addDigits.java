@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/add-digits/
 
-public class happyNumber {
+public class addDigits {
     class Solution {
         public int addDigits(int num) {
             if(num == 0){
